@@ -2,8 +2,8 @@ project "GLFW"
 	kind "StaticLib"
 	language "C"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("bin/" .. configtuple .. "/%{prj.name}")
+	objdir ("bin-int/" .. configtuple .. "/%{prj.name}")
 
 	files
 	{
@@ -17,7 +17,6 @@ project "GLFW"
 		"src/vulkan.c",
 		"src/window.c"
 	}
-
 	filter "system:linux"
 		pic "On"
 
